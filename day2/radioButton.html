@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Radio Button</h1>
+    <form>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label>
+    <br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">other</label>
+    </form>
+    <p id="result"></p>
+    <button onclick="getRadioVal()"> Get radio value</button>
+</body>
+<script>
+        function getRadioVal(){
+        document.getElementById("result").innerHTML= 
+        document.querySelector('input[name="gender"]:checked').value;}
+</script>
+</html>
